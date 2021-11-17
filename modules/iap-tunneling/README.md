@@ -7,7 +7,7 @@ This module will:
 
 - Create firewall rules to allow connections from IAP's TCP forwarding IP addresses to the TCP port
 of your resource's admin service.
-- Create IAM bindings to allow IAP from specified members.
+- Create IAM Members to allow IAP from specified members.
 
 ## Usage
 
