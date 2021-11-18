@@ -36,7 +36,7 @@ resource "google_compute_firewall" "allow_from_iap_to_instances" {
 resource "google_iap_tunnel_instance_iam_member" "enable_iap" {
   for_each = {
     for pair in setproduct(var.instances, var.members) :
-    "${pair[0].name} ${pair[1].zone} ${pair[1]}" => {
+    "${pair[0].name} ${pair[0].zone} ${pair[1]}" => {
       "instance" : pair[0],
       "member" : pair[1]
     }
